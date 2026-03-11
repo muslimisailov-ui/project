@@ -13,7 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 .hero_text{
   display: flex;
@@ -21,12 +20,12 @@
   gap:35px
 }
 h1{
-  font-size: 72px;
+  font-size:60px;
 }
 .container{
   max-width:1200px;
   margin:0 auto;
-
+  padding:0 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -49,8 +48,8 @@ h1{
 
 .nav a{
   text-decoration:none;
-  color:black;
-  font-size:16px;
+  color:rgba(65, 64, 64, 0.573);
+  font-size:20px;
 }
 
 .btn{
@@ -68,24 +67,39 @@ h1{
   align-items: center;
 }
 
+.main-content p{
+color: #545960ab;
+font-size: 25px;
+}
+
+.main-content .Pie{
+position:static;
+  left: auto;
+  right: 45%;
+  width: 325px;
+  z-index:1;
+}
+
 .text-block {
    max-width: 50%;
 }
 
 .text-block h1 { 
-  font-size: 72px; margin-bottom: 20px;
+  font-size: 72px; 
+  margin-bottom: 20px;
 }
 
 .buttons {
  display:flex;
  gap: 25px;
  margin-bottom: 15px;
+
 }
 
 .buttons button {
   padding: 15px;
   border:none;
-  background-color:blue;
+  background-color:rgb(7, 7, 249);
   color:rgb(247, 247, 249);
  border-radius: 6px; 
  font-size: 16px; 
@@ -98,28 +112,16 @@ h1{
   text-align: center;
 }
 
-.container {
-  max-width: 1200px;               
-  margin: 0 auto;                  
-}
-
 .logos-grid {
-  display: flex;
-  flex-wrap: wrap;                 
+  display: flex;             
   align-items: center;
-  gap: 120px 140px;                 
+  gap: 120px 135px;                 
 }
 
 .subscription-index {
   padding: 120px 0 80px;
   background: #ffffff;
   text-align: center; 
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;  
 }
 
 .content {
@@ -161,14 +163,6 @@ h1{
   text-align: left;
 }
 
-.text-content h2 {
-  font-size: 52px;                  
-  font-weight: 800;
-  line-height: 1.05;
-  margin: 0 0 24px 0;
-  color: #0f172a;
-}
-
 .text-content p {
   font-size: 20px;
   line-height: 1.65;
@@ -196,24 +190,18 @@ h1{
   padding-left: 8px;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 120px;
+  gap: 0px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .text-content1{
   margin-left: 550px;
-  flex: 0 0 500px;
+  flex:0 0 500px;
   text-align:left;
 }
 
@@ -221,11 +209,11 @@ h1{
    font-size: 52px;
   font-weight: 800;
   margin-bottom: 50px;
-  color: #0f172a;
+  color: #000000fb;
 }
 
 .text-content1 p {
-font-size: 20px;
+  font-size: 26px;
   line-height: 1.65;
   color: #525f729b;
   margin-bottom: 32px;
@@ -244,7 +232,7 @@ font-size: 20px;
 }
 
 .text-content p {
-  font-size: 20px;
+  font-size: 45px;
   line-height: 1.65;
   color: #475569;
   margin-bottom: 32px;
@@ -252,7 +240,7 @@ font-size: 20px;
 
 .learn-more {
   display:block;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 600;
   color: #3b82f6;
   text-decoration: none;
@@ -275,7 +263,7 @@ font-size: 20px;
   position:absolute;
   left: auto;
   right: 45%;
-  width: 420px;
+  width: 325px;
   z-index:1;
 }
 
@@ -305,7 +293,7 @@ font-size: 20px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 420px;
+  width: 325px;
   z-index: 2;
   animation: float 7s ease-in-out infinite;
 }
@@ -324,11 +312,6 @@ font-size: 20px;
   background: #ffffff;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
 
 .cards {
   display: flex;                    
@@ -346,7 +329,6 @@ font-size: 20px;
 
 
 .icon-wrapper {
-
   height: 100px;
   border-radius: 100%;
   display: flex;
@@ -362,21 +344,21 @@ font-size: 20px;
 }
 
 .card p {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1.6;
   color: #7a767696;
 }
 
 
 .pricing-section h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   color: #0f172a;
 }
 
 .toggle-btn {
   padding: 14px 40px;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   border: none;
   border-radius: 5px;
@@ -385,7 +367,7 @@ font-size: 20px;
 
 .toggle-btn.active,
 .toggle-btn:hover {
-  background: #3b54f6;
+  background: #0b0fd8;
   color: white;
  
 }
@@ -396,17 +378,10 @@ font-size: 20px;
   text-align: center;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
 .plans-grid {
   display: flex;
   justify-content: center;
-  gap: 150px;
-  flex-wrap: wrap;
+  gap: 120px;
 }
 
 .plan-card {
@@ -425,12 +400,12 @@ font-size: 20px;
   border-color: #cbd5e1;
 }
 
-/* Premium карточкасы оранж */
+
 .plan-card.premium {
   background: linear-gradient(135deg, #f97316, #ea580c);
   color: white;
   border: none;
-  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 12px 40px rgba(249, 116, 22, 0.452);
 }
 
 .plan-card.premium h3,
@@ -475,20 +450,144 @@ font-size: 20px;
 .btn {
   display: inline-block;
   padding: 16px 40px;
-  background: #57310c73;
-  color: rgb(2, 16, 224);
+  background: #fe8104;
+  color: rgb(10, 59, 206);
   font-size: 30px;
   font-weight: 400;
   border-radius: 12px;
   text-decoration: none;
 }
+.btn1{
+ display: inline-block;
+  padding: 16px 40px;
+  background: #fe8104;
+  color: rgb(251, 251, 252);
+  font-size: 25px;
+  font-weight: 300;
+  border-radius: 10px;
+  text-decoration: none;
+}
 
 .btn:hover {
-  background: #2563eb;
+  background: #ffffff;
 }
 
 .starter .btn,
 .enterprise .btn {
   background: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  
+  .content, 
+  .main-content, 
+  .hero {
+    max-width: 960px;
+    margin: 20px;
+    padding: 0  25px;
+    display: flex;
+    gap: 30px;
+  }
+
+ 
+  .text-content1 {
+    margin-left: 380px; 
+    flex: 1;
+  }
+
+  .text-content, .text-block {
+    flex: 1;
+  }
+
+  
+  .illustration {
+    flex: 0 0 450px; 
+    height: 450px;
+  }
+
+  .illustration .character {
+    width: 300px; 
+  }
+
+  .illustration .pie-chart, 
+  .illustration .charts-overlay {
+    width: 300px;
+  }
+
+  
+  .plans-grid {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 75px;             
+    width: 100%;            
+  }
+
+ .plan-card {
+   width: 80%;            
+   max-width: 800px;      
+   padding: 40px;        
+  }
+  
+
+  
+  .plan-card h3 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+
+  .plan-card .price {
+    font-size: 80px;      
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .plan-card .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    width: 100%;          
+  }
+
+  .plan-card .features li {
+    font-size: 50px;      
+    margin-bottom: 30px;  
+    color: #555;          
+  }
+
+  
+  .cards {
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;      
+    gap: 150px;                
+    
+    margin: 0px auto;        
+    padding: 0 100px;
+    margin-bottom: 50px;
+  }
+
+  .card p {
+    font-size: 35px;
+  }
+ 
+  .icon-wrapper.green, .icon-wrapper.blue {
+    width: 250px;
+    height: 250px;
+  }
+
+  .card-icon {
+    width: 270px; 
+    height: auto;
+  }
+
+  
+  .logos-grid{
+    gap: 120px 65px;
+  }
+  
+  
 }
 
