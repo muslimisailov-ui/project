@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти - Logoipsum</title>
+    <link rel="stylesheet" href="style3.css"> </head>
+<body>
+
+ <div class="reg-card">
+    <h2>Войти</h2>
+    
+    <div class="input-group">
+      <label>Логин</label>
+      <input type="text" id="loginName" placeholder="Введите ваш логин">
+    </div>
+
+    <div class="input-group">
+       <label>Пароль</label>
+       <input type="password" id="loginPassword" placeholder="****">
+    </div>
+
+    <button class="btn-reg" onclick="handleLogin()">Войти</button>
+    
+    <p style="margin-top: 20px; font-size: 14px; color: #666;">
+        Нет аккаунта? <a href="registration.html" style="color: #ff6b00; text-decoration: none; font-weight: bold;">Зарегистрироваться</a>
+    </p>
+    
+    <a href="index.html" class="back-home">←Назад на главную</a>
+</div>
+
+<script>
+    function handleLogin() {
+        const loginInput = document.getElementById('loginName').value;
+        const passwordInput = document.getElementById('loginPassword').value;
+
+        const savedUser = localStorage.getItem('registered_user');
+        const savedPass = localStorage.getItem('registered_pass');
+
+        if (loginInput === savedUser && passwordInput === savedPass) {
+            localStorage.setItem('user_name', loginInput);
+            window.location.href = 'index.html';
+        } else {
+            alert("Ошибка! Неверное имя пользователя или пароль.");
+        }
+    }
+</script>
+
+</body>
+</html>

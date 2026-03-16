@@ -21,7 +21,7 @@
       <a href="Pricing.html">Pricing</a>
       <a href="#">Blog</a>
     </nav>
-    <a href="registration.html" id="authBtn" class="btn-orange">Get Started</a>
+    <a href="login.html" id="authBtn" class="btn-orange">login</a>
   </div>
 </header>
 
@@ -159,33 +159,49 @@
   </div>
 </section>
 
-  <script>
-    window.onload = function() {
-    const savedName = localStorage.getItem('user_name');
-    const authBtn = document.getElementById('authBtn');
 
-    if (savedName && authBtn) {
-           
-    authBtn.innerText = savedName;
-    authBtn.href = "#";
-    authBtn.style.background = "#28a745"; 
 
-            
-    const logoutBtn = document.createElement('button');
-    logoutBtn.innerText = 'Выход';
-            
-          
-    logoutBtn.style.cssText = "margin-left:10px; padding:10px; background:#dc3545; color:white; border:none; border-radius:5px; cursor:pointer;";
+<script>
+ window.onload = function() {
+ renderAuth();
+ };
+
+  function renderAuth() {
+  const savedName = localStorage.getItem('user_name');
+  const authBtn = document.getElementById('authBtn'); 
+
+  if (savedName && authBtn) {     
+  authBtn.innerText = savedName;
+  authBtn.href = "#"; 
+  authBtn.style.background = "#28a745"; 
 
             
-    logoutBtn.onclick = function() {
-    localStorage.removeItem('user_name'); 
-    window.location.reload(); 
-    };
-
-    authBtn.after(logoutBtn);
-    }
-  };
+  if (!document.getElementById('logoutBtn')) {
+  const logoutBtn = document.createElement('button');
+  logoutBtn.id = 'logoutBtn'; 
+  logoutBtn.innerText = 'Выход';
+                
+              
+  logoutBtn.style.cssText = `
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+   `;
+                
+ logoutBtn.onclick = function() {
+ localStorage.removeItem('user_name'); 
+ window.location.reload(); 
+ };    
+authBtn.after(logoutBtn);
+   }
+ }
+}
 </script>
+
 </body>
 </html>

@@ -8,32 +8,32 @@
 <body>
 
 <div class="reg-card">
-    <h2>Катталуу</h2>
+    <h2>Регистрация</h2>
     
-    <div class="input-row">
-        <div class="input-group">
-            <label>Имя</label>
-            <input type="text" id="firstName" placeholder="Имя">
-        </div>
-        <div class="input-group">
-            <label>Фамилия</label>
-            <input type="text" id="lastName" placeholder=" Фамилия">
-        </div>
+   <div class="input-row">
+    <div class="input-group">
+        <label>Имя</label>
+        <input type="text" id="firstName" placeholder="Имя">
+    </div>
+    <div class="input-group">
+        <label>Фамилия</label>
+        <input type="text" id="lastName" placeholder="Фамилия">
+    </div>
+</div>
+
+    <div class="input-group">
+      <label>Логин</label>
+       <input type="text" id="userName" placeholder="Логин">
     </div>
 
     <div class="input-group">
-        <label>Электронный почта</label>
-        <input type="email" id="email" placeholder="example@mail.com">
+      <label>Номер телефона</label>
+      <input type="tel" id="phone" placeholder="+996 --- --- ---">
     </div>
 
     <div class="input-group">
-        <label>Телефон номер</label>
-        <input type="tel" id="phone" placeholder="+996 --- --- ---">
-    </div>
-
-    <div class="input-group">
-        <label>Пароль</label>
-        <input type="password" id="password" placeholder="****">
+     <label>Пароль</label>
+     <input type="password" id="password" placeholder="****">
     </div>
 
     <button class="btn-reg" onclick="registerUser()">Зарегистрироваться</button>
@@ -79,40 +79,18 @@
 </script>
 
 <script>
-    window.onload = function() {
-        renderAuth();
-    };
+    function registerUser() {
+        const uName = document.getElementById('userName').value; 
+        const pass = document.getElementById('password').value; 
 
-    function renderAuth() {
-        const savedName = localStorage.getItem('user_name');
-        const container = document.querySelector('.header .container');
-        const authBtn = document.getElementById('authBtn');
-
-        if (savedName) {
-            authBtn.innerText = savedName;
-            authBtn.href = "#";
-            authBtn.style.background = "#28a745"
-
-            if (!document.getElementById('logoutBtn')) {
-                const logoutBtn = document.createElement('button');
-                logoutBtn.id = 'logoutBtn';
-                logoutBtn.innerText = 'Выход';
-                
-                logoutBtn.style.marginLeft = "15px";
-                logoutBtn.style.padding = "8px 15px";
-                logoutBtn.style.backgroundColor = "#dc3545";
-                logoutBtn.style.color = "white";
-                logoutBtn.style.border = "none";
-                logoutBtn.style.borderRadius = "5px";
-                logoutBtn.style.cursor = "pointer";
-
-                logoutBtn.onclick = function() {
-                    localStorage.removeItem('user_name'); 
-                    location.reload(); 
-                };
-
-                authBtn.parentNode.appendChild(logoutBtn);
-            }
+        if (uName && pass) {
+            localStorage.setItem('registered_user', uName);
+            localStorage.setItem('registered_pass', pass);
+            
+            alert("Вы зарегистрировались! Теперь войдите, используя свой логин.");
+            window.location.href = 'login.html'; 
+        } else {
+            alert("Введите имя пользователя и пароль!");
         }
     }
 </script>
